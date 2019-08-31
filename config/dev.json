@@ -1,0 +1,618 @@
+{
+  "options": {
+    "dialogflow": {
+      "projectId": "minotour-6c9e6"
+    },
+    "wit": {},
+    "lex": {}
+  },
+  "intents": [{
+    "name": "input.welcome",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "7c6ea9ff-b12b-45ab-b0a2-79f4009adab5",
+        "trainingMode": "EXAMPLE"
+      }
+    }
+  }, {
+    "name": "find.event",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "785a4cc9-ba13-433b-8710-23b353194d14",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@event",
+      "primary": true,
+      "mapping": {
+        "dialogflow": {
+          "name": "category"
+        }
+      }
+    }, {
+      "name": "@city",
+      "multiple": true
+    }, {
+      "name": "@datetime"
+    }]
+  }, {
+    "name": "find.shopping",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "1184e4be-3808-4abd-9645-cb60d155f2ad",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@shopping",
+      "primary": true,
+      "mapping": {
+        "dialogflow": {
+          "name": "category"
+        }
+      }
+    }, {
+      "name": "@city",
+      "multiple": true
+    }, {
+      "name": "@datetime"
+    }]
+  }, {
+    "name": "find.localbusiness",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "d4bdf381-9179-4df8-b7d0-55b03d84448f",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@localbusiness",
+      "primary": true,
+      "mapping": {
+        "dialogflow": {
+          "name": "category"
+        }
+      }
+    }, {
+      "name": "@city",
+      "multiple": true
+    }]
+  }, {
+    "name": "find.itinerary",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "85aa0a02-507a-46ee-8983-443a959da468",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@itinerary",
+      "primary": true
+    }, {
+      "name": "@city"
+    }]
+  }, {
+    "name": "find.alternatives",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "dc2aa248-caf1-4fd4-9b58-8c8597f107e1",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "prefixes": {
+      "en": [
+        "what about",
+        "and",
+        "or",
+        "in"
+      ],
+      "fr": [
+        "et",
+        "ou",
+        "à",
+        "en"
+      ]
+    },
+    "entities": [{
+      "name": "@city",
+      "primary": true,
+      "multiple": true
+    },{
+      "name": "@datetime",
+      "primary": true
+    }]
+  }, {
+    "name": "find.more",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "91e4067f-f8ee-42d4-b453-3077c1d1e6a2",
+        "trainingMode": "EXAMPLE"
+      }
+    },
+    "entities": []
+  }, {
+    "name": "find.restaurant",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "e6a15efe-9640-46f9-9ced-797d3ef1ff3e",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@city",
+      "multiple": true
+    }, {
+      "name": "@food",
+      "primary": true,
+      "mapping": {
+        "dialogflow": {
+          "name": "category"
+        }
+      }
+    }, {
+      "name": "@datetime"
+    }]
+  }, {
+    "name": "find.accommodation",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "1f151e34-a9f3-43e4-ba35-386a7ffed5c8",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@city",
+      "multiple": true
+    }, {
+      "name": "@accommodation",
+      "primary": true,
+      "mapping": {
+        "dialogflow": {
+          "name": "category"
+        }
+      }
+    }, {
+      "name": "@datetime"
+    }]
+  }, {
+    "name": "find.poi",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "808d8be5-e195-43bb-8815-7997397491f7",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@city",
+      "multiple": true
+    }, {
+      "name": "@poi",
+      "primary": true,
+      "mapping": {
+        "dialogflow": {
+          "name": "category"
+        }
+      }
+    }, {
+      "name": "@datetime"
+    }]
+  }, {
+    "name": "find.activity",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "29d1e8ba-82a0-423b-a384-901d4549cc79",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@activity",
+      "primary": true,
+      "mapping": {
+        "dialogflow": {
+          "name": "category"
+        }
+      }
+    }, {
+      "name": "@city",
+      "multiple": true
+    }, {
+      "name": "@datetime"
+    }]
+  }, {
+    "name": "leave.positive",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "91f28d47-77c4-4e70-9726-4820c435e5c3",
+        "trainingMode": "EXAMPLE"
+      }
+    }
+  }, {
+    "name": "leave.negative",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "c9ccbb53-1a0c-4bc7-bce5-95c0cad3b47e",
+        "trainingMode": "EXAMPLE"
+      }
+    }
+  }, {
+    "name": "abandon",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "40950251-243c-4bf0-9952-716dd17988ff",
+        "trainingMode": "EXAMPLE"
+      }
+    }
+  }, {
+    "name": "insult",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "0eb5210d-4973-47fc-99ce-10b6c54d66a8",
+        "trainingMode": "EXAMPLE"
+      }
+    }
+  }, {
+    "name": "discover.city",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "55a51601-0507-4188-b3c7-811076fedad2",
+        "trainingMode": "EXAMPLE"
+      }
+    },
+    "entities": [{
+      "name": "@city"
+    }]
+  }, {
+    "name": "find.address",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "eb54f5c3-44dc-41f3-b126-221ecac709c5",
+        "trainingMode": "EXAMPLE"
+      }
+    },
+    "entities": [{
+      "name": "@city"
+    }, {
+      "name": "@poi"
+    }, {
+      "name": "@accommodation"
+    }, {
+      "name": "@sys.location",
+      "mapping": {
+        "dialogflow": {
+          "name": "location",
+          "type": "@sys.location"
+        }
+      }
+    }]
+  }, {
+    "name": "find.generic",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "33c39aea-2ddf-4cf9-9fd3-d0e2ecb0f28d",
+        "trainingMode": "EXAMPLE"
+      }
+    },
+    "entities": [{
+      "name": "@city",
+      "multiple": true
+    }, {
+      "name": "@datetime"
+    }]
+  }, {
+    "name": "weather",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "6cac8718-9659-4d11-b603-595a4a582c62",
+        "trainingMode": "EXAMPLE"
+      }
+    },
+    "entities": [{
+      "name": "@weather"
+    }, {
+      "name": "@city"
+    }, {
+      "name": "@datetime"
+    }]
+  }, {
+    "name": "help",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "5aa74cb8-fb34-44dc-a611-b52ee1647fd4",
+        "trainingMode": "EXAMPLE"
+      }
+    },
+    "entities": []
+  }],
+  "entities": [{
+    "name": "accommodation",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "36d0c87d-f81f-46bb-b3b4-4bd0b9e9015b"
+      }
+    },
+    "sample": {
+      "en": "camping",
+      "fr": "camping"
+    }
+  }, {
+    "name": "activity",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "a5c9f8e6-354a-47c3-a0b8-b4c36c26c692"
+      }
+    },
+    "sample": {
+      "en": "arcade",
+      "fr": "arcade"
+    }
+  }, {
+    "name": "custom-city",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "8e3b39a5-4782-49d3-84eb-02a9ba2c5ef9"
+      }
+    },
+    "sample": {
+      "en": ["Nice", "Paris", "Lyon", "Marseille"],
+      "fr": ["Nice", "Paris", "Lyon", "Marseille"]
+    }
+  }, {
+    "name": "event",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "b29c934e-7113-4139-903a-737c9e28b6d0"
+      }
+    },
+    "sample": {
+      "en": "event",
+      "fr": "loisirs"
+    }
+  }, {
+    "name": "food",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "9d73ace6-cda2-4221-8bdb-6cbc775828a9"
+      }
+    },
+    "sample": {
+      "en": "food",
+      "fr": "nourriture"
+    }
+  }, {
+    "name": "localbusiness",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "e6933d22-cb0e-49a2-be16-0af9e9dcb756"
+      }
+    },
+    "sample": {
+      "en": "lawyer",
+      "fr": "lawyer"
+    }
+  }, {
+    "name": "poi",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "d50261c0-9b16-4f9d-b18a-5d10414f4577"
+      }
+    },
+    "sample": {
+      "en": "park",
+      "fr": "park"
+    }
+  }, {
+    "name": "shopping",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "41cb7c9d-ca3d-4ada-acf2-34b855358e7f"
+      }
+    },
+    "sample": {
+      "en": "shop",
+      "fr": "boutique"
+    }
+  }, {
+    "name": "sightseeing",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "12ec6aba-2d56-4301-93cc-e6edfad24bfe"
+      }
+    },
+    "sample": {
+      "en": "sightseeing",
+      "fr": "sightseeing"
+    }
+  }, {
+    "name": "itinerary",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "079251a1-2ed2-4d47-903d-2832070c4771"
+      }
+    },
+    "sample": {
+      "en": "itinerary",
+      "fr": "direction"
+    }
+  }, {
+    "name": "weather",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "69249cf0-d314-4235-8101-59ed4fd274a9"
+      }
+    },
+    "sample": {
+      "en": "weather",
+      "fr": "meteo"
+    }
+  }, {
+    "name": "ski_accommodation_position",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "4c15f3eb-563f-4c17-a02f-55149428bff6"
+      }
+    },
+    "sample": {
+      "en": "in snow front",
+      "fr": "au bas des pistes"
+    }
+  }, {
+    "name": "ski_area_lift",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "6c172c1d-b530-4b6f-bfee-5a8b2ee7573a"
+      }
+    },
+    "sample": {
+      "en": "ski lift",
+      "fr": "remontee"
+    }
+  }, {
+    "name": "ski_equipment",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "df914858-222e-4dd0-a53c-261b586ac281"
+      }
+    },
+    "sample": {
+      "en": "snow chains",
+      "fr": "chaines"
+    }
+  }, {
+    "name": "ski_facilities",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "0542c10d-9f51-4ddc-af80-190ef790762a"
+      }
+    },
+    "sample": {
+      "en": "facility",
+      "fr": "commerce"
+    }
+  }, {
+    "name": "ski_open_close",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "a6303cf3-c586-4cfa-94af-30b4d015df80"
+      }
+    },
+    "sample": {
+      "en": "opening date",
+      "fr": "date d'ouverture"
+    }
+  }, {
+    "name": "ski_slope",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "a2d95643-a4b7-4dff-9265-e3711ca55af7"
+      }
+    },
+    "sample": {
+      "en": "slopes",
+      "fr": "pentes"
+    },
+    "responses": [
+      "The Auron resort offers 135 kms of ski runs, 46 slopes (10 blacks, 16 reds, 17 blues, 3 greens) and 19 ski lifts. Checkout the map at http://winter.auron.com/ski-area"
+    ]
+  }, {
+    "name": "ski_snow",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "56c51915-7a1e-436e-89ea-74ae84fb6daf"
+      }
+    },
+    "sample": {
+      "en": "snow",
+      "fr": "neige"
+    }
+  }, {
+    "name": "ski_tariffs",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "c583abac-beff-4e07-b6bf-db491eae6527"
+      }
+    },
+    "sample": {
+      "en": "tariff",
+      "fr": "forfait"
+    },
+    "responses": [
+      "The full daily ski pass for an adult is 35€ but there are many deals for family, students, seniors, and week duration stay. Checkout http://winter.auron.com/ski-pass-rates"
+    ]
+  }, {
+    "name": "sys.any",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "type": "@sys.any"
+      }
+    },
+    "sample": {
+      "en": "any words",
+      "fr": "any words"
+    }
+  }, {
+    "name": "datetime",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "c36b061a-1a1a-418d-acfa-e230b8a61655"
+      }
+    },
+    "sample": {
+      "en": "tomorrow at 2pm",
+      "fr": "demain a 14h"
+    }
+  }, {
+    "name": "city",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "72c4ccc4-25d8-40c2-a125-5d0f801f5cef"
+      }
+    },
+    "sample": {
+      "en": "Nice",
+      "fr": "Nice"
+    }
+  }]
+}

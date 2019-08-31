@@ -1,0 +1,73 @@
+{
+  "options": {
+    "dialogflow": {
+      "projectId": "test-12345"
+    },
+    "wit": {},
+    "lex": {}
+  },
+  "intents": [{
+    "name": "test",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "185a4cc9-ba13-433b-8710-23b353194d14",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@fruit",
+      "primary": true
+    }]
+  }],
+  "entities": [{
+    "name": "fruit",
+    "languageCode": ["en", "fr"],
+    "sample": {
+      "fr": "pomme",
+      "en": "apple"
+    },
+    "settings": {
+      "dialogflow": {
+        "id": "26d0c87d-f81f-46bb-b3b4-4bd0b9e9015b"
+      }
+    }
+  }, {
+    "name": "city",
+    "languageCode": ["en", "fr"],
+    "sample": {
+      "fr": "Nice",
+      "en": "Nice"
+    },
+    "settings": {
+      "dialogflow": {
+        "id": "10a1c29f-a92a-57cc-c4c5-5ce1cafa126c"
+      }
+    },
+    "query": {
+      "endpoint": "https://kb.city-moove.fr/sparql",
+      "body": {
+        "proto": {
+          "id": "?id",
+          "ref": "$foaf:name$required$sample"
+        },
+        "$where": [
+          "GRAPH <http://3cixty.com/cotedazur/metadata> { ?s foaf:name ?name }"
+        ],
+        "$limit": 200
+      }
+    }
+  }, {
+    "name": "sys.any",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "type": "@sys.any"
+      }
+    },
+    "sample": {
+      "en": "any words",
+      "fr": "any words"
+    }
+  }]
+}

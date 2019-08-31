@@ -1,0 +1,322 @@
+{
+  "options": {
+    "dialogflow": {
+      "projectId": "minotour-6c9e6"
+    },
+    "wit": {},
+    "lex": {}
+  },
+  "intents": [{
+    "name": "access_to_auron_station",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "a46d9752-5a85-43f0-ba9a-c99f3b1a8049",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@ski_road",
+      "primary": true
+    }, {
+      "name": "@ski_station"
+    }]
+  }, {
+    "name": "ski_lifts_ski_area",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "1c6ea2ae-818b-4f83-8b43-3f1998526545",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@ski_area_lift",
+      "primary": true
+    }, {
+      "name": "@ski_station"
+    }]
+  }, {
+    "name": "slopes",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "1894180a-6cbd-449f-ab80-ee821c450365",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@ski_slope",
+      "primary": true
+    }, {
+      "name": "@ski_station"
+    }]
+  }, {
+    "name": "special_equipments",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "2f063284-787b-4a09-af25-fb122ec32246",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@ski_equipment",
+      "primary": true
+    }, {
+      "name": "@ski_station"
+    }]
+  }, {
+    "name": "state_of_snow",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "388a57cc-97ad-4574-9b15-32ef5122ab80",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@ski_snow",
+      "primary": true
+    }, {
+      "name": "@ski_station"
+    }]
+  }, {
+    "name": "station_opening_closing_date",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "c83071a4-b521-4243-94a2-de3fd667b806",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@ski_open_close",
+      "primary": true
+    }, {
+      "name": "@ski_station"
+    }]
+  }, {
+    "name": "tariffs_and_package",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "0df04a1b-e37b-47ff-8fe6-d9769fdb15ec",
+        "trainingMode": "TEMPLATE"
+      }
+    },
+    "entities": [{
+      "name": "@ski_tariffs",
+      "primary": true
+    }, {
+      "name": "@ski_station"
+    }, {
+      "name": "@date_time",
+      "mapping": {
+        "dialogflow": {
+          "name": "datetime",
+          "type": "@sys.date-time"
+        }
+      }
+    }]
+  }],
+  "entities": [{
+    "name": "custom-city",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "72c4ccc4-25d8-40c2-a125-5d0f801f5cef"
+      }
+    },
+    "sample": {
+      "en": "Nice",
+      "fr": "Nice"
+    }
+  }, {
+    "name": "ski_accommodation_position",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "4c15f3eb-563f-4c17-a02f-55149428bff6"
+      }
+    },
+    "sample": {
+      "en": "in snow front",
+      "fr": "au bas des pistes"
+    }
+  }, {
+    "name": "ski_area_lift",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "6c172c1d-b530-4b6f-bfee-5a8b2ee7573a"
+      }
+    },
+    "sample": {
+      "en": "ski lift",
+      "fr": "remontee"
+    }
+  }, {
+    "name": "ski_equipment",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "df914858-222e-4dd0-a53c-261b586ac281"
+      }
+    },
+    "sample": {
+      "en": "snow chains",
+      "fr": "chaines"
+    }
+  }, {
+    "name": "ski_facilities",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "0542c10d-9f51-4ddc-af80-190ef790762a"
+      }
+    },
+    "sample": {
+      "en": "facility",
+      "fr": "commerce"
+    }
+  }, {
+    "name": "itinerary",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "079251a1-2ed2-4d47-903d-2832070c4771"
+      }
+    },
+    "sample": {
+      "en": "route",
+      "fr": "direction"
+    }
+  }, {
+    "name": "ski_open_close",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "a6303cf3-c586-4cfa-94af-30b4d015df80"
+      }
+    },
+    "sample": {
+      "en": "opening date",
+      "fr": "date d'ouverture"
+    }
+  }, {
+    "name": "ski_road",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "c6ebec44-da42-43e1-92dd-5ead1622c622"
+      }
+    },
+    "sample": {
+      "en": "road to",
+      "fr": "la route"
+    }
+  }, {
+    "name": "ski_setup_verb",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "a6c72c33-95d8-4020-be74-7aa13cad86ef"
+      }
+    },
+    "sample": {
+      "en": "Set up",
+      "fr": "Prendre"
+    }
+  }, {
+    "name": "ski_slope",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "a2d95643-a4b7-4dff-9265-e3711ca55af7"
+      }
+    },
+    "sample": {
+      "en": "slopes",
+      "fr": "pentes"
+    },
+    "responses": [
+      "The Auron resort offers 135 kms of ski runs, 46 slopes (10 blacks, 16 reds, 17 blues, 3 greens) and 19 ski lifts. Checkout the map at http://winter.auron.com/ski-area"
+    ]
+  }, {
+    "name": "ski_snow",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "56c51915-7a1e-436e-89ea-74ae84fb6daf"
+      }
+    },
+    "sample": {
+      "en": "snow",
+      "fr": "neige"
+    }
+  }, {
+    "name": "ski_station",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "f6482b42-77b3-457c-9106-e0aa01da9bb8"
+      }
+    },
+    "sample": {
+      "en": "station",
+      "fr": "station"
+    }
+  }, {
+    "name": "ski_tariffs",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "c583abac-beff-4e07-b6bf-db491eae6527"
+      }
+    },
+    "sample": {
+      "en": "tariff",
+      "fr": "forfait"
+    },
+    "responses": [
+      "The full daily ski pass for an adult is 35€ but there are many deals for family, students, seniors, and week duration stay. Checkout http://winter.auron.com/ski-pass-rates"
+    ]
+  }, {
+    "name": "ski_weather",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "id": "a01af162-7953-473f-9bbf-3ae4561161fd"
+      }
+    },
+    "sample": {
+      "en": "climate",
+      "fr": "climat"
+    }
+  }, {
+    "name": "sys.any",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "type": "@sys.any"
+      }
+    },
+    "sample": {
+      "en": "any words",
+      "fr": "any words"
+    }
+  }, {
+    "name": "sys.date-time",
+    "languageCode": ["en", "fr"],
+    "settings": {
+      "dialogflow": {
+        "type": "@sys.date-time"
+      }
+    },
+    "sample": {
+      "en": "tomorrow at 2pm",
+      "fr": "demain a 14h"
+    }
+  }]
+}

@@ -1,0 +1,8 @@
+node_modules
+intents
+!intents/[test]@fr.csv
+!intents/[test]@en.csv
+entities
+!entities/[fruit]@fr.csv
+!entities/[fruit]@en.csv
+.env
